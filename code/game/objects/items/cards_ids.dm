@@ -25,8 +25,8 @@
  */
 
 /obj/item/card
-	name = "card"
-	desc = "Does card things."
+	name = "卡"
+	desc = "他做卡该做的事"
 	icon = 'icons/obj/card.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
@@ -42,8 +42,8 @@
 
 /// "Retro" ID card that renders itself as the icon state with no overlays.
 /obj/item/card/id
-	name = "retro identification card"
-	desc = "A card used to provide ID and determine access across the station."
+	name = "复古ID卡"
+	desc = "一个用于提供ID信息和在站点范围内的通行权限的卡"
 	icon_state = "card_grey"
 	worn_icon_state = "card_retro"
 	inhand_icon_state = "card-id"
@@ -82,7 +82,7 @@
 	/// Minimum forced fee for holopay stations. Registers as "pay what you want."
 	var/holopay_min_fee = 0
 	/// The holopay name chosen by the user
-	var/holopay_name = "holographic pay stand"
+	var/holopay_name = "全息交易站"
 
 	/// Registered owner's age.
 	var/registered_age = 18 //SKYRAT EDIT - ORIGINAL (13)
@@ -801,56 +801,56 @@
 	return trim?.sechud_icon_state || SECHUD_UNKNOWN
 
 /obj/item/card/id/away
-	name = "\proper a perfectly generic identification card"
-	desc = "A perfectly generic identification card. Looks like it could use some flavor."
+	name = "\proper 一张完美的普通ID卡"
+	desc = "一张完美的普通ID卡，看来可以在上面定制一些东西"
 	trim = /datum/id_trim/away
 	icon_state = "retro"
 	registered_age = null
 
 /obj/item/card/id/away/hotel
-	name = "Staff ID"
-	desc = "A staff ID used to access the hotel's doors."
+	name = "工作人员ID"
+	desc = "一张工作人员的ID卡，用于进出旅馆的门"
 	trim = /datum/id_trim/away/hotel
 
 /obj/item/card/id/away/hotel/security
-	name = "Officer ID"
+	name = "警官ID"
 	trim = /datum/id_trim/away/hotel/security
 
 /obj/item/card/id/away/old
-	name = "\proper a perfectly generic identification card"
-	desc = "A perfectly generic identification card. Looks like it could use some flavor."
+	name = "\proper 一张完美的普通ID卡"
+	desc = "一张完美的普通ID卡，看来可以在上面定制一些东西"
 
 /obj/item/card/id/away/old/sec
-	name = "Charlie Station Security Officer's ID card"
-	desc = "A faded Charlie Station ID card. You can make out the rank \"Security Officer\"."
+	name = "查理站安全警卫的ID卡"
+	desc = "褪色的查理站ID卡，你能认出来职位是 \"Security Officer\""
 	trim = /datum/id_trim/away/old/sec
 
 /obj/item/card/id/away/old/sci
-	name = "Charlie Station Scientist's ID card"
-	desc = "A faded Charlie Station ID card. You can make out the rank \"Scientist\"."
+	name = "查理站科学家的ID卡"
+	desc = "褪色的查理站ID卡，你能认出来职位是 \"Scientist\""
 	trim = /datum/id_trim/away/old/sci
 
 /obj/item/card/id/away/old/eng
-	name = "Charlie Station Engineer's ID card"
-	desc = "A faded Charlie Station ID card. You can make out the rank \"Station Engineer\"."
+	name = "查理站工程师的ID卡"
+	desc = "褪色的查理站ID卡，你能认出来职位是 \"Station Engineer\""
 	trim = /datum/id_trim/away/old/eng
 
 /obj/item/card/id/away/old/apc
-	name = "APC Access ID"
-	desc = "A special ID card that allows access to APC terminals."
+	name = "APC访问ID"
+	desc = "一张特别的ID卡，允许持有者访问APC终端"
 	trim = /datum/id_trim/away/old/apc
 
 /obj/item/card/id/away/old/robo
-	name = "Delta Station Roboticist's ID card"
-	desc = "An ID card that allows access to bots maintenance protocols."
+	name = "德尔塔站机器人学家的ID卡"
+	desc = "一张ID卡，允许持有者使用机器人的维修协议"
 	trim = /datum/id_trim/away/old/robo
 
 /obj/item/card/id/away/deep_storage //deepstorage.dmm space ruin
-	name = "bunker access ID"
+	name = "地堡访问ID"
 
 /obj/item/card/id/departmental_budget
-	name = "departmental card (ERROR)"
-	desc = "Provides access to the departmental budget."
+	name = "部门卡（错误）"
+	desc = "允许访问部门的经费"
 	icon_state = "budgetcard"
 	var/department_ID = ACCOUNT_CIV
 	var/department_name = ACCOUNT_CIV_NAME
@@ -864,7 +864,7 @@
 		if(!B.bank_cards.Find(src))
 			B.bank_cards += src
 		name = "departmental card ([department_name])"
-		desc = "Provides access to the [department_name]."
+		desc = "允许访问 [department_name]"
 	SSeconomy.dep_cards += src
 
 /obj/item/card/id/departmental_budget/Destroy()
@@ -883,8 +883,8 @@
 	registered_account.bank_card_talk(span_warning("Withdrawing is not compatible with this card design."), TRUE) //prevents the vault bank machine being useless and putting money from the budget to your card to go over personal crates
 
 /obj/item/card/id/advanced
-	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station. Has an integrated digital display and advanced microchips."
+	name = "ID卡"
+	desc = "一个用于提供ID信息和在站点范围内的通行权限的卡，拥有集成式数字显示器和高级微处理器"
 	icon_state = "card_grey"
 	worn_icon_state = "card_grey"
 
@@ -1313,18 +1313,18 @@
 	trim = /datum/id_trim/job/prisoner/six
 
 /obj/item/card/id/advanced/prisoner/seven
-	name = "Prisoner #13-007"
-	registered_name = "Prisoner #13-007"
+	name = "囚犯 #13-007"
+	registered_name = "囚犯 #13-007"
 	trim = /datum/id_trim/job/prisoner/seven
 
 /obj/item/card/id/advanced/mining
-	name = "mining ID"
+	name = "采矿ID"
 	trim = /datum/id_trim/job/shaft_miner/spare
 
 /obj/item/card/id/advanced/highlander
-	name = "highlander ID"
-	registered_name = "Highlander"
-	desc = "There can be only one!"
+	name = "高地人ID"
+	registered_name = "高地人"
+	desc = "这里只能有一个人！"
 	icon_state = "card_black"
 	worn_icon_state = "card_black"
 	assigned_icon_state = "assigned_syndicate"
@@ -1332,8 +1332,8 @@
 	wildcard_slots = WILDCARD_LIMIT_ADMIN
 
 /obj/item/card/id/advanced/chameleon
-	name = "agent card"
-	desc = "A highly advanced chameleon ID card. Touch this card on another ID card or player to choose which accesses to copy. Has special magnetic properties which force it to the front of wallets."
+	name = "特工卡"
+	desc = "一张高科技变色龙卡，使用磁卡触碰其他的ID卡或者玩家可以选择复制哪项访问权限，其拥有特别的磁吸设计，使其可以吸附在钱包的前面"
 	trim = /datum/id_trim/chameleon
 	wildcard_slots = WILDCARD_LIMIT_CHAMELEON_PLUS // SKYRAT EDIT - Original WILDCARD_LIMIT_CHAMELEON
 

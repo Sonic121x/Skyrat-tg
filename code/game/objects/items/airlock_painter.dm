@@ -1,6 +1,6 @@
 /obj/item/airlock_painter
-	name = "airlock painter"
-	desc = "An advanced autopainter preprogrammed with several paintjobs for airlocks. Use it on an airlock during or after construction to change the paintjob. Alt-Click to remove the ink cartridge."
+	name = "气闸涂手"
+	desc = "先进的自动喷漆器，预制了几种气闸的喷漆样式，当建造时气闸时或完成建造后在气闸上使用来改变喷漆样式。Alt+点击来取出墨盒"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "paint_sprayer"
 	inhand_icon_state = "paint_sprayer"
@@ -149,8 +149,8 @@
 		ink = null
 
 /obj/item/airlock_painter/decal
-	name = "decal painter"
-	desc = "An airlock painter, reprogramed to use a different style of paint in order to apply decals for floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed. Alt-Click to remove the ink cartridge."
+	name = "气闸涂手+"
+	desc = "气闸涂手，进行了重编程使之除了可以在气闸上面喷涂以外，也同样可以在地板上喷出图案来，拆除地板时图案会消失，Alt+点击来取出墨盒"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "decal_sprayer"
 	inhand_icon_state = "decal_sprayer"
@@ -367,13 +367,13 @@
 	qdel(painter)
 
 /obj/item/airlock_painter/decal/debug
-	name = "extreme decal painter"
+	name = "终极气闸涂手"
 	icon_state = "decal_sprayer_ex"
 	initial_ink_type = /obj/item/toner/extreme
 
 /obj/item/airlock_painter/decal/tile
-	name = "tile sprayer"
-	desc = "An airlock painter, reprogramed to use a different style of paint in order to spray colors on floor tiles as well, in addition to repainting doors. Decals break when the floor tiles are removed. Alt-Click to change design."
+	name = "地板涂手"
+	desc = "气闸涂手，进行了重编程使之除了可以在气闸上面喷涂以外，也同样可以在地板上喷出不同颜色的图案，拆除地板时图案会消失，Alt+点击来更换设计"
 	icon_state = "tile_sprayer"
 	stored_dir = 2
 	stored_color = "#D4D4D432"

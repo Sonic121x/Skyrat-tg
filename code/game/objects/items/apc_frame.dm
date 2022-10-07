@@ -1,7 +1,7 @@
 // APC HULL
 /obj/item/wallframe/apc
-	name = "\improper APC frame"
-	desc = "Used for repairing or building APCs."
+	name = "\improper APC框架"
+	desc = "用于维修或建造APC"
 	icon_state = "apc"
 	result_path = /obj/machinery/power/apc
 

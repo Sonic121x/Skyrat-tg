@@ -1,6 +1,6 @@
 /obj/item/boxcutter
-	name = "boxcutter"
-	desc = "A tool for cutting boxes, or throats."
+	name = "切箱器"
+	desc = "用于切割箱子或者喉咙的工具"
 	icon = 'icons/obj/boxcutter.dmi'
 	icon_state = "boxcutter"
 	base_icon_state = "boxcutter"

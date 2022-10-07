@@ -1,7 +1,7 @@
 
 /obj/item/bodybag
-	name = "body bag"
-	desc = "A folded bag designed for the storage and transportation of cadavers."
+	name = "尸体袋"
+	desc = "一个折叠好的袋子，为运输和存储尸体而打造"
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bodybag_folded"
 	w_class = WEIGHT_CLASS_SMALL
@@ -47,8 +47,8 @@
 // Bluespace bodybag
 
 /obj/item/bodybag/bluespace
-	name = "bluespace body bag"
-	desc = "A folded bluespace body bag designed for the storage and transportation of cadavers."
+	name = "蓝空尸体袋"
+	desc = "一个折叠好的袋子，为运输和存储大量尸体而打造"
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bluebodybag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/bluespace
@@ -99,8 +99,8 @@
 	qdel(src)
 
 /obj/item/bodybag/environmental
-	name = "environmental protection bag"
-	desc = "A folded, reinforced bag designed to protect against exoplanetary environmental storms."
+	name = "环境保护袋"
+	desc = "一个折叠好的加固袋子，为了抵抗外星球的环境风暴而打造"
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "envirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental
@@ -108,26 +108,26 @@
 	resistance_flags = ACID_PROOF | FIRE_PROOF | FREEZE_PROOF
 
 /obj/item/bodybag/environmental/nanotrasen
-	name = "elite environmental protection bag"
-	desc = "A folded, heavily reinforced, and insulated bag, capable of fully isolating its contents from external factors."
+	name = "精英环境保护袋"
+	desc = "一个折叠好的重型绝缘加固袋子，能够将其内容物与外环境完全隔离"
 	icon_state = "ntenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/nanotrasen
 	resistance_flags = ACID_PROOF | FIRE_PROOF | FREEZE_PROOF | LAVA_PROOF
 
 /obj/item/bodybag/environmental/prisoner
-	name = "prisoner transport bag"
-	desc = "Intended for transport of prisoners through hazardous environments, this folded environmental protection bag comes with straps to keep an occupant secure."
+	name = "囚犯运输袋"
+	desc = "用于在危险环境中运送囚犯，这款折叠的环境保护袋拥有绑带来固定其乘员"
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "prisonerenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner
 
 /obj/item/bodybag/environmental/prisoner/pressurized
-	name = "pressurized prisoner transport bag"
+	name = "加压型囚犯运输袋"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner/pressurized
 
 /obj/item/bodybag/environmental/prisoner/syndicate
-	name = "syndicate prisoner transport bag"
-	desc = "An alteration of Nanotrasen's environmental protection bag which has been used in several high-profile kidnappings. Designed to keep a victim unconscious, alive, and secured until they are transported to a required location."
+	name = "辛迪加囚犯运输袋"
+	desc = "纳米传讯的环境保护袋的改良版，用于多起高调绑架案，旨在让其受害者保持昏迷，活着和固定，直到被运输至所需位置"
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "syndieenvirobag_folded"
 	unfoldedbag_path = /obj/structure/closet/body_bag/environmental/prisoner/pressurized/syndicate

@@ -1,6 +1,6 @@
 /obj/item/organ/internal/body_egg
-	name = "body egg"
-	desc = "All slimy and yuck."
+	name = "尸体蛋"
+	desc = "黏糊又恶心"
 	icon_state = "innards"
 	visual = TRUE
 	zone = BODY_ZONE_CHEST

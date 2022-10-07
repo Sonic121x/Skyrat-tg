@@ -2,8 +2,8 @@
 #define BROOM_PUSH_LIMIT 20
 
 /obj/item/pushbroom
-	name = "push broom"
-	desc = "This is my BROOMSTICK! It can be used manually or braced with two hands to sweep items as you move. It has a telescopic handle for compact storage."
+	name = "长柄扫帚"
+	desc = "这就是我的飞天扫帚！它可以被手动使用或者用两只手撑起，在你移动时清扫物品，他有个伸缩把手用于紧凑存储"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "broom0"
 	base_icon_state = "broom"
@@ -86,7 +86,7 @@
 
 
 /obj/item/pushbroom/cyborg
-	name = "cyborg push broom"
+	name = "赛博格长柄扫帚"
 
 /obj/item/pushbroom/cyborg/Initialize(mapload)
 	. = ..()

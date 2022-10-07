@@ -1,7 +1,7 @@
 //Cardboard cutouts! They're man-shaped and can be colored with a crayon to look like a human in a certain outfit, although it's limited, discolored, and obvious to more than a cursory glance.
 /obj/item/cardboard_cutout
-	name = "cardboard cutout"
-	desc = "A vaguely humanoid cardboard cutout. It's completely blank."
+	name = "纸板模型"
+	desc = "一个大概的人形纸板模型，他是空白的"
 	icon = 'icons/obj/art/cardboard_cutout.dmi'
 	icon_state = "cutout_basic"
 	w_class = WEIGHT_CLASS_BULKY
@@ -117,79 +117,79 @@
 	switch(new_appearance)
 		if(JOB_ASSISTANT)
 			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
-			desc = "A cardboat cutout of an assistant."
+			desc = "一个助手的纸板模型"
 			icon_state = "cutout_greytide"
 		if("Clown")
 			name = pick(GLOB.clown_names)
-			desc = "A cardboard cutout of a clown. You get the feeling that it should be in a corner."
+			desc = "一个小丑的纸板模型，你觉得这个应该放置在角落里"
 			icon_state = "cutout_clown"
 		if("Mime")
 			name = pick(GLOB.mime_names)
-			desc = "...(A cardboard cutout of a mime.)"
+			desc = "...（一个哑剧的纸板模型）"
 			icon_state = "cutout_mime"
 		if("Traitor")
 			name = "[pick("Unknown", "Captain")]"
-			desc = "A cardboard cutout of a traitor."
+			desc = "一个叛徒的纸板模型"
 			icon_state = "cutout_traitor"
 		if("Nuke Op")
 			name = "[pick("Unknown", "COMMS", "Telecomms", "AI", "stealthy op", "STEALTH", "sneakybeaky", "MEDIC", "Medic")]"
-			desc = "A cardboard cutout of a nuclear operative."
+			desc = "一个核行动的纸板模型"
 			icon_state = "cutout_fluke"
 		if("Cultist")
-			name = "Unknown"
-			desc = "A cardboard cutout of a cultist."
+			name = "未知"
+			desc = "一个邪教徒的纸板模型"
 			icon_state = "cutout_cultist"
 		if("Clockwork Cultist")
 			name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
-			desc = "A cardboard cutout of a servant of Ratvar."
+			desc = "一个钟表神的仆人的纸板模型"
 			icon_state = "cutout_servant"
 		if("Revolutionary")
-			name = "Unknown"
-			desc = "A cardboard cutout of a revolutionary."
+			name = "未知"
+			desc = "一个革命的纸板模型"
 			icon_state = "cutout_viva"
 		if("Wizard")
 			name = "[pick(GLOB.wizard_first)], [pick(GLOB.wizard_second)]"
-			desc = "A cardboard cutout of a wizard."
+			desc = "一个巫师的纸板模型"
 			icon_state = "cutout_wizard"
 		if("Nightmare")
 			name = "[pick(GLOB.nightmare_names)]"
-			desc = "A cardboard cutout of a nightmare."
+			desc = "一个梦魇的纸板模型"
 			icon_state = "cutout_nightmare"
 		if("Xenomorph")
 			name = "alien hunter ([rand(1, 999)])"
-			desc = "A cardboard cutout of a xenomorph."
+			desc = "一个异形的纸板模型"
 			icon_state = "cutout_fukken_xeno"
 			if(prob(25))
 				alpha = 75 //Spooky sneaking!
 		if("Xenomorph Maid")
 			name = "lusty xenomorph maid ([rand(1, 999)])"
-			desc = "A cardboard cutout of a xenomorph maid."
+			desc = "一个元气满满的异形女仆的纸板模型"
 			icon_state = "cutout_lusty"
 		if("Ash Walker")
 			name = lizard_name(pick(MALE, FEMALE))
-			desc = "A cardboard cutout of an ash walker."
+			desc = "一个灰烬行者的纸板模型"
 			icon_state = "cutout_free_antag"
 		if("Deathsquad Officer")
 			name = pick(GLOB.commando_names)
-			desc = "A cardboard cutout of a death commando."
+			desc = "一个敢死队指挥官的纸板模型"
 			icon_state = "cutout_deathsquad"
 		if("Ian")
-			name = "Ian"
-			desc = "A cardboard cutout of the HoP's beloved corgi."
+			name = "伊恩"
+			desc = "一个HoP心爱的柯基的纸板模型"
 			icon_state = "cutout_ian"
 		if("Slaughter Demon")
-			name = "slaughter demon"
-			desc = "A cardboard cutout of a slaughter demon."
+			name = "屠戮恶魔"
+			desc = "一个屠戮恶魔的纸板模型"
 			icon = 'icons/mob/simple/mob.dmi'
 			icon_state = "daemon"
 		if("Laughter Demon")
-			name = "laughter demon"
-			desc = "A cardboard cutout of a laughter demon."
+			name = "欢笑恶魔"
+			desc = "一个欢笑恶魔的纸板模型"
 			icon = 'icons/mob/simple/mob.dmi'
 			icon_state = "bowmon"
 		if("Private Security Officer")
-			name = "Private Security Officer"
-			desc = "A cardboard cutout of a private security officer."
+			name = "私人安全官"
+			desc = "一个私人安全官的纸板模型"
 			icon_state = "cutout_ntsec"
 		else
 			return FALSE

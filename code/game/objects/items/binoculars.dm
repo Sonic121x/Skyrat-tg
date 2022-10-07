@@ -1,6 +1,6 @@
 /obj/item/binoculars
-	name = "binoculars"
-	desc = "Used for long-distance surveillance."
+	name = "望远镜"
+	desc = "用于远距离的监视"
 	inhand_icon_state = "binoculars"
 	icon_state = "binoculars"
 	worn_icon_state = "binoculars"

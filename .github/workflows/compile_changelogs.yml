@@ -1,3 +1,4 @@
+/*
 name: Compile changelogs
 
 on:
@@ -52,3 +53,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.SKYRATBOT_TOKEN }}
+*/

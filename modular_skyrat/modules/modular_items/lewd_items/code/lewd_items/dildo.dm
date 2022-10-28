@@ -160,7 +160,7 @@
 						'modular_skyrat/modules/modular_items/lewd_items/sounds/bang6.ogg'), 100, TRUE, ignore_walls = FALSE)
 
 /*
-*	POLYCHROMIC // this doesn't even use polychromism I Want To Die
+*	COLOUR CHANGING
 */
 
 GLOBAL_LIST_INIT(dildo_colors, list(//mostly neon colors

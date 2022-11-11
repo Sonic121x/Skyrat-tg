@@ -228,7 +228,7 @@
 
 	CHECK_TICK
 
-	/* ///SKYRAT EDIT START
+	///SKYRAT EDIT START
 	// Add AntagHUD to everyone, see who was really evil the whole time!
 	for(var/datum/atom_hud/alternate_appearance/basic/antagonist_hud/antagonist_hud in GLOB.active_alternate_appearances)
 		for(var/mob/player as anything in GLOB.player_list)
@@ -236,18 +236,18 @@
 
 	CHECK_TICK
 	///Skyrat EDIT END
-	*/
+	
 
 	//Set news report and mode result
 	mode.set_round_result()
 
 	send2adminchat("Server", "Round just ended.")
 
-	/* //SKYRAT EDIT - START (DISCORD Updates)
+	//SKYRAT EDIT - START (DISCORD Updates)
 	MOVED CHECK INTO TICKER.DM
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
-	*/
+	
 	send2chat("The current round has ended. Please standby for your shift interlude Nanotrasen News Network's report!", CONFIG_GET(string/chat_announce_new_game))
 	send2chat(send_news_report(), CONFIG_GET(string/chat_announce_new_game))
 	//SKYRAT EDIT - END

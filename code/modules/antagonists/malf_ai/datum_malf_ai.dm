@@ -238,7 +238,7 @@
 /datum/antagonist/malf_ai/roundend_report()
 	var/list/result = list()
 
-	//var/malf_ai_won = TRUE // SKYRAT EDIT REMOVAL
+	var/malf_ai_won = TRUE // SKYRAT EDIT REMOVAL
 
 	result += printplayer(owner)
 
@@ -247,13 +247,13 @@
 		var/count = 1
 		for(var/datum/objective/objective in objectives)
 			// SKYRAT EDIT START - No greentext
-			/*
+			
 			if(objective.check_completion())
 				objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text] [span_greentext("Success!")]"
 			else
 				objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text] [span_redtext("Fail.")]"
 				malf_ai_won = FALSE
-			*/
+			
 			objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text]"
 			// SKYRAT EDIT END - No greentext
 			count++
@@ -261,7 +261,7 @@
 	result += objectives_text
 
 	// SKYRAT EDIT REMOVAL START
-	/*
+	
 	var/special_role_text = lowertext(name)
 
 	if(malf_ai_won)
@@ -269,7 +269,7 @@
 	else
 		result += span_redtext("The [special_role_text] has failed!")
 		SEND_SOUND(owner.current, 'sound/ambience/ambifailure.ogg')
-	*/
+	
 
 	return result.Join("<br>")
 

@@ -479,7 +479,7 @@
 				return
 			var/time
 			if(alert == "Yes")
-				time = tgui_input_number(usr, "Input custom time in seconds", "Custom time", 60, 6000, 1) * 10
+				time = tgui_input_number(usr, "Input custom time in seconds", "Custom time", 60, 2592000, 1) * 10
 			reschedule_custom(time)
 			message_admins("[key_name_admin(usr)] has rescheduled the event system.")
 			return
@@ -491,7 +491,7 @@
 				return
 			var/time
 			if(alert == "Yes")
-				time = tgui_input_number(usr, "Input custom time in seconds", "Custom time", 60, 6000, 1) * 10
+				time = tgui_input_number(usr, "Input custom time in seconds", "Custom time", 60, 2592000, 1) * 10
 			reschedule_low_chaos(time)
 			message_admins("[key_name_admin(usr)] has rescheduled the LOW CHAOS event system.")
 			return

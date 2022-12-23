@@ -1,3 +1,4 @@
+/*
 // Make disposal pipes hurt you if you ride them.
 
 /obj/structure/disposalpipe
@@ -23,3 +24,4 @@
 		if(HAS_TRAIT(living_within, TRAIT_TRASHMAN))
 			continue
 		living_within.adjustBruteLoss(5)
+*/

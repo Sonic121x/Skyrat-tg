@@ -620,7 +620,7 @@
 		set_invis_see(see_override)
 
 	if(SSmapping.level_trait(z, ZTRAIT_NOXRAY))
-		new_sight = SEE_BLACKNESS
+		new_sight = NONE
 
 	set_sight(new_sight)
 	return ..()
@@ -863,7 +863,7 @@
 	else
 		clear_alert(ALERT_HANDCUFFED)
 		clear_mood_event("handcuffed")
-	update_action_buttons_icon() //some of our action buttons might be unusable when we're handcuffed.
+	update_mob_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
 	update_worn_handcuffs()
 	update_hud_handcuffed()
 

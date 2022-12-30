@@ -108,10 +108,10 @@
 	. = ..()
 	if(!istype(affected_mob, /mob/living/carbon/human))
 		return
-/*
+
 	if(prob(1.5)) // 1.5% chance of special tickling feather spawning. No idea why, i was thinking that this is funny idea. Do not erase it plz
 		new /obj/item/tickle_feather(loc)
-*/
+
 //and there is code for successful check, so we are hitting someone with a pillow
 	pillow_feathers.start()
 	switch(user.zone_selected) //to let code know what part of body we gonna hit
@@ -163,7 +163,8 @@
 	name = "pillow"
 	desc = "A tiny pillow, for tiny heads."
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi'
-	icon_state = "pillow"
+	icon_state = "pillow_pink_round"
+	base_icon_state = "pillow"
 	var/current_color = "pink"
 	var/current_form = "round"
 
@@ -179,7 +180,7 @@
 
 /obj/structure/bed/pillow_tiny/update_icon_state()
 	. = ..()
-	icon_state = "[initial(icon_state)]_[current_color]_[current_form]"
+	icon_state = "[base_icon_state]_[current_color]_[current_form]"
 
 //picking up the pillow
 
@@ -248,8 +249,9 @@
 	name = "small pillow pile"
 	desc = "A small pile of pillows. A comfortable seat, especially for taurs or nagas."
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi'
-	icon_state = "pillowpile_small"
-//	pseudo_z_axis = 4
+	icon_state = "pillowpile_small_pink"
+	base_icon_state = "pillowpile_small"
+	pseudo_z_axis = 4
 	var/current_color = "pink"
 	var/mutable_appearance/armrest
 
@@ -302,7 +304,7 @@
 
 /obj/structure/chair/pillow_small/update_icon_state()
 	. = ..()
-	icon_state = "[initial(icon_state)]_[current_color]"
+	icon_state = "[base_icon_state]_[current_color]"
 
 //Removing pillow from a pile
 /obj/structure/chair/pillow_small/AltClick(mob/user)
@@ -373,8 +375,9 @@
 	name = "large pillow pile"
 	desc = "A large pile of pillows. Jump on it!"
 	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_structures/pillows.dmi'
-	icon_state = "pillowpile_large"
-//	pseudo_z_axis = 4
+	icon_state = "pillowpile_large_pink"
+	base_icon_state = "pillowpile_large"
+	pseudo_z_axis = 4
 	var/current_color = "pink"
 	var/mutable_appearance/armrest
 	//Containing pillows that we have here
@@ -430,7 +433,7 @@
 
 /obj/structure/bed/pillow_large/update_icon_state()
 	. = ..()
-	icon_state = "[initial(icon_state)]_[current_color]"
+	icon_state = "[base_icon_state]_[current_color]"
 
 //Removing pillow from a pile
 /obj/structure/bed/pillow_large/AltClick(mob/user)

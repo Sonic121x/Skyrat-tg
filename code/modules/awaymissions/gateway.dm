@@ -154,7 +154,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 			continue
 		to_chat(AM, span_warning("[content_item] seems to be blocking you from entering the gateway!"))
 		return
-	//SKYRAT EDIT END*/
+	*///SKYRAT EDIT END
 	if(get_dir(src,AM) == SOUTH)
 		gateway.Transfer(AM)
 
@@ -352,7 +352,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 			continue
 		to_chat(user, span_warning("[content_item] seems to be blocking you from entering the gateway!"))
 		return
-	//SKYRAT EDIT END*/
+	*///SKYRAT EDIT END
 	if(!target)
 		if(!GLOB.the_gateway)
 			to_chat(user,span_warning("Home gateway is not responding!"))

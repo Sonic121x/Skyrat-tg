@@ -9,7 +9,7 @@
 	anchored = FALSE
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	/// How many reagents at maximum can it hold
-	var/max_volume = 10000
+	var/max_volume = 100000
 	/// Whether spewing reagents out, instead of siphoning them
 	var/spewing_mode = FALSE
 	/// Whether its turned on and processing
@@ -27,14 +27,16 @@
 	return TRUE
 
 /obj/structure/liquid_pump/attack_hand(mob/user)
+/*
 	if(!anchored)
 		to_chat(user, span_warning("[src] needs to be anchored first!"))
 		return
+*/
 	to_chat(user, span_notice("You turn [src] [turned_on ? "off" : "on"]."))
 	toggle_working()
 
 /obj/structure/liquid_pump/AltClick(mob/living/user)
-	if(!user.can_perform_action(src, NEED_DEXTERITY))
+	if(!user.can_perform_action(src, be_close = TRUE, no_dexterity = TRUE))
 		return
 	to_chat(user, span_notice("You flick [src]'s spewing mode [spewing_mode ? "off" : "on"]."))
 	spewing_mode = !spewing_mode

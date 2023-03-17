@@ -1,4 +1,4 @@
-/// Global list containing all the clothing we'd want to check prefs for before we put on someone.
+/*/// Global list containing all the clothing we'd want to check prefs for before we put on someone.
 GLOBAL_LIST_INIT(pref_checked_clothes, list(
 	/obj/item/clothing/mask/ballgag,
 	/obj/item/clothing/mask/ballgag/choking,
@@ -27,3 +27,4 @@ GLOBAL_LIST_INIT(pref_checked_clothes, list(
 			return FALSE
 	return ..()
 
+*/

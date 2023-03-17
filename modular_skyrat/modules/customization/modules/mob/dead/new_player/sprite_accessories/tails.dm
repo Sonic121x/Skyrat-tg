@@ -22,6 +22,9 @@
 		return TRUE
 
 	if(wearer.wear_suit)
+		//Hardsuit?
+		if(istype(wearer.wear_suit, /obj/item/clothing/suit/space/hardsuit))
+			return FALSE
 		// Exception for MODs
 		if(istype(wearer.wear_suit, /obj/item/clothing/suit/mod))
 			return FALSE

@@ -112,11 +112,13 @@
 #undef PAI_FALL_TIME
 
 /// Simple proc adding the falling of the MODsuit when it's no longer moving, for corpses and unconscious wearers.
+/*
 /obj/item/mod/control/proc/pai_fall()
 	if(!wearer)
 		return
 	REMOVE_TRAIT(wearer, TRAIT_FORCED_STANDING, MOD_TRAIT)
-
+*/
+///取消在主人死掉的时候强制摔倒
 /**
  * Misc stuff to avoid having files with three lines in them.
  */
@@ -124,7 +126,8 @@
 	/// pAI mob inhabiting the MOD.
 	var/mob/living/silicon/pai/mod_pai
 	/// Whether or not an on-board pAI can move the suit. FALSE by default, intended to be modified either via VV or via a possible future pAI program.
-	var/can_pai_move_suit = FALSE
+	var/can_pai_move_suit = TRUE
+       ///走走路没什么大不了的
 
 
 /datum/action/item_action/mod

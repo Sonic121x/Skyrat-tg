@@ -112,7 +112,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/mask/ballgag/choking/process(delta_time)
+/obj/item/clothing/mask/ballgag/choking/process(seconds_per_tick)
 	var/mob/living/carbon/human/wearer = loc
 	if(!istype(wearer))
 		return
@@ -120,7 +120,7 @@
 		return
 	if(!chokes_wearer)
 		return
-	choke_timer += delta_time
+	choke_timer += seconds_per_tick
 	if(choke_timer < choke_interval)
 		return
 	switch(gag_size)

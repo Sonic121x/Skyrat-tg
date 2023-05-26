@@ -20,8 +20,7 @@
 	category = EVENT_CATEGORY_ENGINEERING
 	max_occurrences = 4
 	earliest_start = 30 MINUTES
-	//121edit
-	min_players = 10
+	description = "The supermatter will increase in power by a random amount, and announce it."
 
 /datum/round_event/supermatter_surge
 	announce_when = 1

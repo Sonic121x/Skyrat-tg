@@ -1,3 +1,4 @@
+/*
 /mob/living/carbon/human/verb/climax_verb()
 	set name = "Climax"
 	set category = "IC"
@@ -31,3 +32,4 @@
 		dropItemToGround(equipped_item, TRUE)
 
 	return TRUE
+*/

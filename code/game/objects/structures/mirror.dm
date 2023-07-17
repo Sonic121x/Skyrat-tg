@@ -20,7 +20,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 
-/* SKYRAT EDIT REMOVAL
 /obj/structure/mirror/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
@@ -57,7 +56,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 		return TRUE
 
 	hairdresser.set_hairstyle(new_style, update = TRUE)
-*/
 
 /obj/structure/mirror/examine_status(mob/user)
 	if(broken)

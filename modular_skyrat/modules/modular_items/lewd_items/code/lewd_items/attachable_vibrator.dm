@@ -1,7 +1,7 @@
 /*
 *	VIBRATING EGG
 */
-
+/*
 /obj/item/clothing/sextoy/eggvib
 	name = "vibrating egg"
 	desc = "A simple, vibrating sex toy."
@@ -334,3 +334,4 @@
 		if("high")
 			vibration_mode = "high"
 			play_lewd_sound(loc, 'sound/weapons/magin.ogg', 20, TRUE)
+*/

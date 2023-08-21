@@ -9,7 +9,7 @@
         . = ..()
         atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
         atom_storage.max_slots = 2
-        atom_storage.max_total_storage = atom_storage.max_slots * atom_storage.max_specific_storage
+        atom_storage.max_total_storage = WEIGHT_CLASS_SMALL * 2
 
 /obj/item/storage/pouch/expanded_pouch
         name = "扩容口袋"
@@ -22,7 +22,7 @@
         . = ..()
         atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
         atom_storage.max_slots = 3
-        atom_storage.max_total_storage = atom_storage.max_slots * atom_storage.max_specific_storage
+        atom_storage.max_total_storage = WEIGHT_CLASS_SMALL * 3
         atom_storage.numerical_stacking = FALSE
 
 /obj/item/storage/pouch/carrying_pouch

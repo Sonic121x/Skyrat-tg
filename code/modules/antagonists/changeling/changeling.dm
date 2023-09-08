@@ -11,6 +11,8 @@
 	hijack_speed = 0.5
 	ui_name = "AntagInfoChangeling"
 	suicide_cry = "FOR THE HIVE!!"
+	can_assign_self_objectives = TRUE
+	default_custom_objective = "Consume the station's most valuable genomes."
 	/// Whether to give this changeling objectives or not
 	var/give_objectives = TRUE
 	/// Weather we assign objectives which compete with other lings
@@ -678,10 +680,6 @@
 	add_new_profile(owner.current)
 
 /datum/antagonist/changeling/forge_objectives()
-	//OBJECTIVES - random traitor objectives. Unique objectives "steal brain" and "identity theft".
-	//No escape alone because changelings aren't suited for it and it'd probably just lead to rampant robusting
-	//If it seems like they'd be able to do it in play, add a 10% chance to have to escape alone
-
 	var/escape_objective_possible = TRUE
 
 	switch(competitive_objectives ? rand(1,3) : 1)
@@ -1061,11 +1059,11 @@
 	var/list/parts = list()
 
 	// SKYRAT EDIT REMOVAL START
-	
+	/*
 	var/changeling_win = TRUE
 	if(!owner.current)
 		changeling_win = FALSE
-	
+	*/
 	// SKYRAT EDIT REMOVAL END
 
 	parts += printplayer(owner)
@@ -1075,24 +1073,22 @@
 		var/count = 1
 		for(var/datum/objective/objective in objectives)
 			// SKYRAT EDIT START - No greentext
-			
-			if(objective.check_completion())
-				parts += "<b>Objective #[count]</b>: [objective.explanation_text] [span_greentext("Success!</b>")]"
-			else
-				parts += "<b>Objective #[count]</b>: [objective.explanation_text] [span_redtext("Fail.")]"
+			/*
+			if(!objective.check_completion())
 				changeling_win = FALSE
-			
+			parts += "<b>Objective #[count]</b>: [objective.explanation_text] [objective.get_roundend_success_suffix()]"
+			*/
 			parts += "<b>Objective #[count]</b>: [objective.explanation_text]"
 			// SKYRAT EDIT END - No greentext
 			count++
 
 	// SKYRAT EDIT REMOVAL START - No greentext
-	
+	/*
 	if(changeling_win)
 		parts += span_greentext("The changeling was successful!")
 	else
 		parts += span_redtext("The changeling has failed.")
-	
+	*/
 	// SKYRAT EDIT REMOVAL END - No greentext
 
 	return parts.Join("<br>")

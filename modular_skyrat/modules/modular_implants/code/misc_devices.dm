@@ -121,7 +121,7 @@
 		/obj/item/clothing/glasses/thin,
 		/obj/item/clothing/glasses/biker,
 		/obj/item/clothing/glasses/sunglasses/gar,
-		/obj/item/clothing/glasses/hypno,
+		//obj/item/clothing/glasses/hypno,
 		/obj/item/clothing/glasses/heat,
 		/obj/item/clothing/glasses/cold,
 		/obj/item/clothing/glasses/orange,

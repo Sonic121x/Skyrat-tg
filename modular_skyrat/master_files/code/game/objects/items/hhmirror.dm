@@ -8,6 +8,29 @@
 	. = ..()
 	if(.)
 		return
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+			//see code/modules/mob/dead/new_player/preferences.dm at approx line 545 for comments!
+			//this is largely copypasted from there.
+
+			//handle facial hair (if necessary)
+		if(H.gender != FEMALE)
+			var/new_style = input(user, "Select a facial hair style", "Grooming")  as null|anything in GLOB.facial_hairstyles_list
+			if(!user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
+				return	//no tele-grooming
+			if(new_style)
+				H.facial_hairstyle = new_style
+		else
+			H.facial_hairstyle = "Shaved"
+
+			//handle normal hair
+		var/new_style = input(user, "Select a hair style", "Grooming")  as null|anything in GLOB.hairstyles_list
+		if(!user.can_perform_action(src, FORBID_TELEKINESIS_REACH))
+			return	//no tele-grooming
+		if(new_style)
+			H.hairstyle = new_style
+
+		H.update_hair()
 
 /obj/item/hhmirror/fullmagic
 	name = "full handheld magic mirror"
